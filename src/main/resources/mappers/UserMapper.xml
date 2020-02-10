@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cute.community.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.cute.community.entity.User" >
+    <id column="stu_id" property="stuId" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="group_id" property="groupId" jdbcType="INTEGER" />
+    <result column="role" property="role" jdbcType="INTEGER" />
+    <result column="user_desc" property="userDesc" jdbcType="VARCHAR" />
+    <result column="user_sgnature" property="userSgnature" jdbcType="VARCHAR" />
+    <result column="head_picture_id" property="headPictureId" jdbcType="INTEGER" />
+    <result column="picture_id" property="pictureId" jdbcType="INTEGER" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from user
+    where stu_id = #{stuId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.cute.community.entity.User" >
+    insert into user (stu_id, `password`, user_name, 
+      group_id, `role`, user_desc, 
+      user_sgnature, head_picture_id, picture_id
+      )
+    values (#{stuId,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, 
+      #{groupId,jdbcType=INTEGER}, #{role,jdbcType=INTEGER}, #{userDesc,jdbcType=VARCHAR}, 
+      #{userSgnature,jdbcType=VARCHAR}, #{headPictureId,jdbcType=INTEGER}, #{pictureId,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.cute.community.entity.User" >
+    update user
+    set `password` = #{password,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      group_id = #{groupId,jdbcType=INTEGER},
+      `role` = #{role,jdbcType=INTEGER},
+      user_desc = #{userDesc,jdbcType=VARCHAR},
+      user_sgnature = #{userSgnature,jdbcType=VARCHAR},
+      head_picture_id = #{headPictureId,jdbcType=INTEGER},
+      picture_id = #{pictureId,jdbcType=INTEGER}
+    where stu_id = #{stuId,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select stu_id, `password`, user_name, group_id, `role`, user_desc, user_sgnature, 
+    head_picture_id, picture_id
+    from user
+    where stu_id = #{stuId,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select stu_id, `password`, user_name, group_id, `role`, user_desc, user_sgnature, 
+    head_picture_id, picture_id
+    from user
+  </select>
+</mapper>

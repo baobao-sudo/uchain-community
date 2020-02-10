@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cute.community.dao.FileTypeMapper" >
+  <resultMap id="BaseResultMap" type="com.cute.community.entity.FileType" >
+    <id column="file_type_id" property="fileTypeId" jdbcType="INTEGER" />
+    <result column="file_type" property="fileType" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from file_type
+    where file_type_id = #{fileTypeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cute.community.entity.FileType" >
+    insert into file_type (file_type_id, file_type)
+    values (#{fileTypeId,jdbcType=INTEGER}, #{fileType,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.cute.community.entity.FileType" >
+    update file_type
+    set file_type = #{fileType,jdbcType=VARCHAR}
+    where file_type_id = #{fileTypeId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select file_type_id, file_type
+    from file_type
+    where file_type_id = #{fileTypeId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select file_type_id, file_type
+    from file_type
+  </select>
+</mapper>
