@@ -6,18 +6,12 @@ import lombok.Data;
  * @author Lenovo
  */
 @Data
-public class UserVO {
+public class AllUserVO {
     private String stuId;
 
     private String userName;
 
-    private Integer groupId;
+    private Integer groupType;
 
     private Integer role;
-
-    private String userDesc;
-
-    private String userSignature;
-
-    private String headPictureUrl;
 }
