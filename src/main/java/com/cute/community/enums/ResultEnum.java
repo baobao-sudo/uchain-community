@@ -21,8 +21,13 @@ public enum ResultEnum {
     OLD_PASSWORD_ERROR(3,"原密码错误" ),
     IS_NOT_PERSONAL_OPERATION(4,"非本人操作" ),
     USER_ALREADY_EXIST(5, "此用户已存在"),
-    CODE_ERROR(6,"验证码错误");;
-
+    PARAMETER_ERROR(6,"请注意必填项"),
+    UPLOAD_SIGNATURES_FAIL(7,"修改签名失败"),
+    PROJECT_HAS_EXIST(8,"项目已经存在了"),
+    UPLOAD_FILE(9,"文件上传失败"),
+    FILE_IS_NOT_EXIST(10,"文件不存在"),
+    SQL_ERROR(11,"sql语句执行失败"),
+    USER_DELETE_FAILED(12,"用户删除失败");
 
     private Integer code;
 
