@@ -15,11 +15,9 @@ public class User implements Serializable {
 
     private String userDesc;
 
-    private String userSgnature;
+    private String userSignature;
 
-    private Integer headPictureId;
-
-    private Integer pictureId;
+    private String headPictureUrl;
 
     private static final long serialVersionUID = 1L;
 
@@ -71,28 +69,20 @@ public class User implements Serializable {
         this.userDesc = userDesc == null ? null : userDesc.trim();
     }
 
-    public String getUserSgnature() {
-        return userSgnature;
+    public String getUserSignature() {
+        return userSignature;
     }
 
-    public void setUserSgnature(String userSgnature) {
-        this.userSgnature = userSgnature == null ? null : userSgnature.trim();
+    public void setUserSignature(String userSignature) {
+        this.userSignature = userSignature == null ? null : userSignature.trim();
     }
 
-    public Integer getHeadPictureId() {
-        return headPictureId;
+    public String getHeadPictureUrl() {
+        return headPictureUrl;
     }
 
-    public void setHeadPictureId(Integer headPictureId) {
-        this.headPictureId = headPictureId;
-    }
-
-    public Integer getPictureId() {
-        return pictureId;
-    }
-
-    public void setPictureId(Integer pictureId) {
-        this.pictureId = pictureId;
+    public void setHeadPictureUrl(String headPictureUrl) {
+        this.headPictureUrl = headPictureUrl == null ? null : headPictureUrl.trim();
     }
 
     @Override
@@ -107,9 +97,8 @@ public class User implements Serializable {
         sb.append(", groupId=").append(groupId);
         sb.append(", role=").append(role);
         sb.append(", userDesc=").append(userDesc);
-        sb.append(", userSgnature=").append(userSgnature);
-        sb.append(", headPictureId=").append(headPictureId);
-        sb.append(", pictureId=").append(pictureId);
+        sb.append(", userSignature=").append(userSignature);
+        sb.append(", headPictureUrl=").append(headPictureUrl);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
