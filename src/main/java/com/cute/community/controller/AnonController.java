@@ -7,6 +7,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,7 +33,7 @@ public class AnonController {
 
     @ApiOperation("登录")
     @PostMapping("/login")
-    public ResultVO login(@Valid LoginForm loginForm, HttpServletResponse response) {
-        return userService.login(loginForm, response);
+    public ResultVO login(@Valid LoginForm loginForm, HttpServletResponse response, BindingResult bindingResult) {
+        return userService.login(loginForm,response,bindingResult);
     }
 }
