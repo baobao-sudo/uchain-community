@@ -12,9 +12,13 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * @Author: zty
- * @Date: 2020/1/8 11:22
- */
+ *@ClassName UploadUtil
+ *@Description 上传图片类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Slf4j
 @Component
 public class UploadUtil {

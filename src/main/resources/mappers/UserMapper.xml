@@ -8,9 +8,8 @@
     <result column="group_id" property="groupId" jdbcType="INTEGER" />
     <result column="role" property="role" jdbcType="INTEGER" />
     <result column="user_desc" property="userDesc" jdbcType="VARCHAR" />
-    <result column="user_sgnature" property="userSgnature" jdbcType="VARCHAR" />
-    <result column="head_picture_id" property="headPictureId" jdbcType="INTEGER" />
-    <result column="picture_id" property="pictureId" jdbcType="INTEGER" />
+    <result column="user_signature" property="userSignature" jdbcType="VARCHAR" />
+    <result column="head_picture_url" property="headPictureUrl" jdbcType="VARCHAR" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from user
@@ -19,12 +18,10 @@
   <insert id="insert" parameterType="com.cute.community.entity.User" >
     insert into user (stu_id, `password`, user_name, 
       group_id, `role`, user_desc, 
-      user_sgnature, head_picture_id, picture_id
-      )
+      user_signature, head_picture_url)
     values (#{stuId,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, 
       #{groupId,jdbcType=INTEGER}, #{role,jdbcType=INTEGER}, #{userDesc,jdbcType=VARCHAR}, 
-      #{userSgnature,jdbcType=VARCHAR}, #{headPictureId,jdbcType=INTEGER}, #{pictureId,jdbcType=INTEGER}
-      )
+      #{userSignature,jdbcType=VARCHAR}, #{headPictureUrl,jdbcType=VARCHAR})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.cute.community.entity.User" >
     update user
@@ -33,20 +30,19 @@
       group_id = #{groupId,jdbcType=INTEGER},
       `role` = #{role,jdbcType=INTEGER},
       user_desc = #{userDesc,jdbcType=VARCHAR},
-      user_sgnature = #{userSgnature,jdbcType=VARCHAR},
-      head_picture_id = #{headPictureId,jdbcType=INTEGER},
-      picture_id = #{pictureId,jdbcType=INTEGER}
+      user_signature = #{userSignature,jdbcType=VARCHAR},
+      head_picture_url = #{headPictureUrl,jdbcType=VARCHAR}
     where stu_id = #{stuId,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select stu_id, `password`, user_name, group_id, `role`, user_desc, user_sgnature, 
-    head_picture_id, picture_id
+    select stu_id, `password`, user_name, group_id, `role`, user_desc, user_signature, 
+    head_picture_url
     from user
     where stu_id = #{stuId,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
-    select stu_id, `password`, user_name, group_id, `role`, user_desc, user_sgnature, 
-    head_picture_id, picture_id
+    select stu_id, `password`, user_name, group_id, `role`, user_desc, user_signature, 
+    head_picture_url
     from user
   </select>
 </mapper>

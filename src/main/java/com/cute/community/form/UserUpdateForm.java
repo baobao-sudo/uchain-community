@@ -6,8 +6,13 @@ import lombok.Data;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author Lenovo
- */
+ *@ClassName UserUpdateForm
+ *@Description 管理员更新用户信息
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Data
 public class UserUpdateForm {
 

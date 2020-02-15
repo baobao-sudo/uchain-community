@@ -17,11 +17,13 @@ import javax.servlet.http.HttpServletResponse;
 
 
 /**
- * @ClassName AuthRoleInterceptor
- * @Author hobo
- * @Date 19-4-22 下午7:47
- * @Description 权限验证
- **/
+ *@ClassName AuthRoleInterceptor
+ *@Description 权限验证
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Slf4j
 @Service
 public class AuthRoleInterceptor extends HandlerInterceptorAdapter {

@@ -17,8 +17,13 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 
 /**
- * @author Lenovo
- */
+ *@ClassName UserController
+ *@Description 用户接口
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Slf4j
 @RestController
 @RequestMapping("/user")

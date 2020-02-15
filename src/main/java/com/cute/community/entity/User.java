@@ -1,6 +1,13 @@
 package com.cute.community.entity;
 
 import java.io.Serializable;
+/**
+ *@ClassName User
+ *@Description 用户类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
 
 public class User implements Serializable {
     private String stuId;

@@ -15,7 +15,7 @@ public class UserRegisterForm {
      */
     @NotNull(message = "用户名不能为空")
     @ApiModelProperty("姓名")
-    String username;
+    String userName;
 
     /**
      * 学号
@@ -29,6 +29,6 @@ public class UserRegisterForm {
      */
     @NotNull(message = "分组不能为空")
     @ApiModelProperty("分组（1.后端 2.前端 3.区块链 4.算法 5.UI）")
-    Integer userType;
+    Integer groupId;
 
 }

@@ -17,10 +17,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 /**
- * @author: zty
- * @date 2019/9/6 上午10:37
- * @description:
- */
+ *@ClassName AnonController
+ *@Description 登录接口
+ *@Author Lenovo
+ *@Date 2020/2/15 
+ *@Version 1.0
+**/
+
 @Slf4j
 @RestController
 @RequestMapping("/anon")

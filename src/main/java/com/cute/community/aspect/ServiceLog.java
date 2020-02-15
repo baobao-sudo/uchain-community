@@ -10,11 +10,13 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 /**
- * @ClassName ServiceLog
- * @Author hobo
- * @Date 19-4-22 下午8:38
- * @Description
- **/
+ *@ClassName ServiceLog
+ *@Description service的执行的日志生成
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Aspect
 @Slf4j
 @Component

@@ -6,10 +6,13 @@ import lombok.Data;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author: LZH
- * @date 2019/9/6 上午10:40
- * @description: 登录表单
- */
+ *@ClassName LoginForm
+ *@Description 登录的表单
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Data
 public class LoginForm {
 

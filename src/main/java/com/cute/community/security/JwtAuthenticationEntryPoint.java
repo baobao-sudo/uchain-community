@@ -16,11 +16,13 @@ import java.io.IOException;
 import java.io.Serializable;
 
 /**
- * @ClassName JwtAuthenticationEntryPoint
- * @Author hobo
- * @Date 19-4-22 下午7:19
- * @Description 拦截器
- **/
+ *@ClassName JwtAuthenticationEntryPoint
+ *@Description 拦截器
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Component
 @Slf4j
 public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint, Serializable {

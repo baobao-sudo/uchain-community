@@ -1,13 +1,14 @@
 package com.cute.community.enums;
 
 import lombok.Getter;
-
 /**
- * @ClassName ResultEnum
- * @Author hobo
- * @Date 19-4-22 下午3:45
- * @Description
- **/
+ *@ClassName ResultEnum
+ *@Description 结果枚举类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Getter
 public enum ResultEnum {
     AUTHENTICATION_ERROR(401, "用户认证失败,请重新登录"),

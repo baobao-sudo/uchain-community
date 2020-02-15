@@ -13,10 +13,13 @@ import org.springframework.web.bind.annotation.*;
 
 
 /**
- * @author: zty
- * @date 2019/10/6 下午1:33
- * @description:
- */
+ *@ClassName SecurityCodeController
+ *@Description 验证码接口
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @RestController
 @Slf4j
 @RequestMapping("code")

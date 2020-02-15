@@ -20,9 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author hobo
- * @description
- */
+ *@ClassName SwaggerConfig
+ *@Description Swagger的配置文件
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Configuration
 @EnableSwagger2
 @EnableWebMvc

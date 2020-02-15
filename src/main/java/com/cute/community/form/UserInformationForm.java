@@ -4,8 +4,12 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * @author Lenovo
- */
+ *@ClassName UserInformationForm
+ *@Description 修改个性签名和个人简介的表单
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
 @Data
 public class UserInformationForm {
 

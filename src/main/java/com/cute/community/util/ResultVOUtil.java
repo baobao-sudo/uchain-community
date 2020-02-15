@@ -6,11 +6,13 @@ import com.cute.community.vo.ResultVO;
 import lombok.Data;
 
 /**
- * @ClassName ResultVOUtil
- * @Author hobo
- * @Date 19-4-22 下午3:40
- * @Description
- **/
+ *@ClassName ResultVOUtil
+ *@Description ResultVO的工具类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Data
 public class ResultVOUtil {
 

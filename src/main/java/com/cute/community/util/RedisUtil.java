@@ -12,10 +12,13 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author: zty
- * @date 2019/9/18 下午8:40
- * @description:
- */
+ *@ClassName RedisUtil
+ *@Description redis的工具类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Component
 public class RedisUtil {
 

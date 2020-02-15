@@ -15,11 +15,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @ClassName JwtTokenUtil
- * @Author hobo
- * @Date 19-4-22 下午7:32
- * @Description
- **/
+ *@ClassName JwtTokenUtil
+ *@Description 操作token的类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 
 @Service
 @Slf4j
@@ -35,9 +37,13 @@ public class JwtTokenUtil {
     private static final String AUDIENCE_MOBILE = "mobile";
     private static final String AUDIENCE_TABLET = "tablet";
 
-    //当前的签名的秘钥
+    /**
+     * 当前的签名的秘钥
+     */
     private String secret = "blog";
-    //token的有效时间 约25min
+    /**
+     * token的有效时间 约25min
+     */
     private Long expiration = 1296000L;
 
     public String getUsernameFromToken(String token) {
@@ -62,7 +68,11 @@ public class JwtTokenUtil {
         return created;
     }
 
-    //得到token的有效期
+    /**
+     * 得到token的有效期
+     * @param token
+     * @return
+     */
     private Date getExpirationDateFromToken(String token) {
         Date expiration;
         try {
@@ -98,7 +108,10 @@ public class JwtTokenUtil {
         return claims;
     }
 
-    //设置过期时间
+    /**
+     * 设置过期时间
+     * @return
+     */
     private Date generateExpeirationDate() {
         return new Date(System.currentTimeMillis() + expiration * 1000);
     }
@@ -149,7 +162,11 @@ public class JwtTokenUtil {
         return generateToken(claims);
     }
 
-    //判断是否在10分钟后并在有效期内
+    /**
+     * 判断是否在10分钟后并在有效期内
+     * @param token
+     * @return
+     */
     public Boolean canTokenBeRefreshed(String token) {
         final Date created = getCreatDateFromToken(token);
         return token != null && created != null && isCreatedAfterTenMinutes(created)

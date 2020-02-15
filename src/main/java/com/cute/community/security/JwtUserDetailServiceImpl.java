@@ -11,11 +11,13 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 /**
- * @ClassName JwtUserDetailServiceImpl
- * @Author zty
- * @Date 19-4-22 下午7:24
- * @Description UserDetailService实现类
- **/
+ *@ClassName JwtUserDetailServiceImpl
+ *@Description UserDetailService实现类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 
 @Service
 @Slf4j

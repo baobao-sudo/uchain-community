@@ -1,6 +1,13 @@
 package com.cute.community.entity;
 
 import java.io.Serializable;
+/**
+ *@ClassName Group
+ *@Description 小组类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
 
 public class Group implements Serializable {
     private Integer groupId;

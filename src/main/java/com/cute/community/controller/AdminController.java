@@ -18,10 +18,13 @@ import javax.validation.Valid;
 
 
 /**
- * @author: zty
- * @date 2019/9/5 下午5:06
- * @description:
- */
+ *@ClassName AdminController
+ *@Description 管理员接口类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Slf4j
 @RequestMapping("/admin")
 @RestController

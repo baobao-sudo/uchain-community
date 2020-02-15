@@ -19,11 +19,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
- * @ClassName WebSecurityConfig
- * @Author hobo
- * @Date 19-4-22 下午10:04
- * @Description security配置类
- **/
+ *@ClassName WebSecurityConfig
+ *@Description security配置类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -89,11 +91,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/configuration/security").permitAll()
                 //配置允许匿名访问的路径
                 .antMatchers("/anon/login/**").permitAll()
-                .antMatchers("/admin/**").permitAll()
-                .antMatchers("/re/user/**").permitAll()
-                .antMatchers("/code/**").permitAll()
+                .antMatchers("/image/**").permitAll()
                 .anyRequest().authenticated();
-
         //配置自己的验证过滤器
         httpSecurity
                 .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);

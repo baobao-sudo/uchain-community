@@ -7,11 +7,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 
 /**
- * @ClassName JwtUser
- * @Author hobo
- * @Date 19-4-22 下午3:48
- * @Description  JWTUser配置类
- **/
+ *@ClassName JwtUser
+ *@Description JWTUser配置类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Data
 public class JwtUser implements UserDetails {
 

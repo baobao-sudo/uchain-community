@@ -3,11 +3,13 @@ package com.cute.community.vo;
 import lombok.Data;
 
 /**
- * @ClassName ResultVO
- * @Author hobo
- * @Date 19-4-22 下午3:39
- * @Description
- **/
+ *@ClassName ResultVO
+ *@Description 传给前端的形式
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Data
 public class ResultVO<T> {
 

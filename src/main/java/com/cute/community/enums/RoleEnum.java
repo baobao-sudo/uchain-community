@@ -5,12 +5,12 @@ import lombok.Getter;
 import java.util.HashMap;
 
 /**
- * @ClassName RoleEnum
- * @Author hobo
- * @Date 19-4-22 下午7:29
- * @Description
- **/
-
+ *@ClassName RoleEnum
+ *@Description 用户权限的枚举
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
 @Getter
 public enum RoleEnum {
     USER(0, "普通用户"),

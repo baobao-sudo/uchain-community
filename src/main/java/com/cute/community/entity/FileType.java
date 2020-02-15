@@ -2,6 +2,14 @@ package com.cute.community.entity;
 
 import java.io.Serializable;
 
+/**
+ *@ClassName FileType
+ *@Description 文件类型类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 public class FileType implements Serializable {
     private Integer fileTypeId;
 

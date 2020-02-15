@@ -36,8 +36,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author Lenovo
- */
+ *@ClassName UserServiceImpl
+ *@Description UserService实现类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Service
 @Slf4j
 public class UserServiceImpl implements UserService {
