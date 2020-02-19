@@ -2,6 +2,14 @@ package com.cute.community.dto;
 
 import lombok.Data;
 
+/**
+ *@ClassName PhotoUploadDTO
+ *@Description 上传照片的提取类
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Data
 public class PhotoUploadDTO {
     /**

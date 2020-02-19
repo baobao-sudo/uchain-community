@@ -15,12 +15,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *@ClassName JwtTokenUtil
- *@Description 操作token的类
- *@Author Lenovo
- *@Date 2020/2/15
- *@Version 1.0
-**/
+ * @ClassName JwtTokenUtil
+ * @Description 操作token的类
+ * @Author Lenovo
+ * @Date 2020/2/15
+ * @Version 1.0
+ **/
 
 
 @Service
@@ -70,6 +70,7 @@ public class JwtTokenUtil {
 
     /**
      * 得到token的有效期
+     *
      * @param token
      * @return
      */
@@ -110,6 +111,7 @@ public class JwtTokenUtil {
 
     /**
      * 设置过期时间
+     *
      * @return
      */
     private Date generateExpeirationDate() {
@@ -164,6 +166,7 @@ public class JwtTokenUtil {
 
     /**
      * 判断是否在10分钟后并在有效期内
+     *
      * @param token
      * @return
      */

@@ -45,4 +45,10 @@
     head_picture_url
     from user
   </select>
+  <select id="selectByGroupId" parameterType="integer" resultMap="BaseResultMap">
+    select stu_id, `password`, user_name, group_id, `role`, user_desc, user_signature,
+    head_picture_url
+    from user
+    where group_id = #{groupId,jdbcType=INTEGER}
+  </select>
 </mapper>

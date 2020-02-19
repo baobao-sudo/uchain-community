@@ -17,12 +17,12 @@ import javax.servlet.http.HttpServletResponse;
 
 
 /**
- *@ClassName AuthRoleInterceptor
- *@Description 权限验证
- *@Author Lenovo
- *@Date 2020/2/15
- *@Version 1.0
-**/
+ * @ClassName AuthRoleInterceptor
+ * @Description 权限验证
+ * @Author Lenovo
+ * @Date 2020/2/15
+ * @Version 1.0
+ **/
 
 @Slf4j
 @Service

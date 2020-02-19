@@ -31,4 +31,4 @@ jwt:
   defaultPassword: "123456"
 img:
   location: D:\\photo\\
-  url: http://baobao.mynatapp.cc/
+  url: http://baobao.mynatapp.cc

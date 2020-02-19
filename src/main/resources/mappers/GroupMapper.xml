@@ -6,25 +6,25 @@
     <result column="group_name" property="groupName" jdbcType="VARCHAR" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from group
+    delete from `group`
     where group_id = #{groupId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.cute.community.entity.Group" >
-    insert into group (group_id, group_name)
+    insert into `group` (group_id, group_name)
     values (#{groupId,jdbcType=INTEGER}, #{groupName,jdbcType=VARCHAR})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.cute.community.entity.Group" >
-    update group
+    update `group`
     set group_name = #{groupName,jdbcType=VARCHAR}
     where group_id = #{groupId,jdbcType=INTEGER}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select group_id, group_name
-    from group
+    from `group`
     where group_id = #{groupId,jdbcType=INTEGER}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
     select group_id, group_name
-    from group
+    from `group`
   </select>
 </mapper>

@@ -1,6 +1,7 @@
 package com.cute.community.dao;
 
 import com.cute.community.entity.FileType;
+
 import java.util.List;
 
 public interface FileTypeMapper {

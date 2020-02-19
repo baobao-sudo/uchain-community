@@ -6,12 +6,12 @@ import com.cute.community.vo.ResultVO;
 import lombok.Data;
 
 /**
- *@ClassName ResultVOUtil
- *@Description ResultVO的工具类
- *@Author Lenovo
- *@Date 2020/2/15
- *@Version 1.0
-**/
+ * @ClassName ResultVOUtil
+ * @Description ResultVO的工具类
+ * @Author Lenovo
+ * @Date 2020/2/15
+ * @Version 1.0
+ **/
 
 @Data
 public class ResultVOUtil {
@@ -45,7 +45,7 @@ public class ResultVOUtil {
         return resultVO;
     }
 
-    public static ResultVO error(String msg,Object object){
+    public static ResultVO error(String msg, Object object) {
         ResultVO resultVO = new ResultVO();
         resultVO.setCode(1);
         resultVO.setMsg(msg);

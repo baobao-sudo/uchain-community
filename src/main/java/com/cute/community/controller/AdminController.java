@@ -2,10 +2,12 @@ package com.cute.community.controller;
 
 
 import com.cute.community.accessctro.RoleContro;
+import com.cute.community.enums.ResultEnum;
 import com.cute.community.enums.RoleEnum;
 import com.cute.community.form.UserRegisterForm;
 import com.cute.community.form.UserUpdateForm;
 import com.cute.community.service.UserService;
+import com.cute.community.util.ResultVOUtil;
 import com.cute.community.vo.ResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -18,12 +20,12 @@ import javax.validation.Valid;
 
 
 /**
- *@ClassName AdminController
- *@Description 管理员接口类
- *@Author Lenovo
- *@Date 2020/2/15
- *@Version 1.0
-**/
+ * @ClassName AdminController
+ * @Description 管理员接口类
+ * @Author Lenovo
+ * @Date 2020/2/15
+ * @Version 1.0
+ **/
 
 @Slf4j
 @RequestMapping("/admin")
@@ -39,7 +41,11 @@ public class AdminController {
     @ApiOperation("添加用户")
     @RoleContro(role = RoleEnum.ADMIN)
     public Object addUser(@Valid UserRegisterForm registerForm, BindingResult bindingResult) {
-        return userService.addUser(registerForm,bindingResult);
+        if (bindingResult.hasErrors()) {
+            log.info("参数注意必填项！");
+            return ResultVOUtil.error(ResultEnum.PARAMETER_ERROR);
+        }
+        return userService.addUser(registerForm);
     }
 
     @GetMapping("/showAll")
@@ -47,6 +53,13 @@ public class AdminController {
     @RoleContro(role = RoleEnum.ADMIN)
     public ResultVO showAll() {
         return userService.showAll();
+    }
+
+    @GetMapping("/showAllByGroup")
+    @ApiOperation("按照分组展示所有用户展示所有用户")
+    @RoleContro(role = RoleEnum.ADMIN)
+    public ResultVO showAllByGroup() {
+        return userService.showAllByGroup();
     }
 
     @PostMapping("/deleteUser")
@@ -60,8 +73,10 @@ public class AdminController {
     @ApiOperation("修改用户信息")
     @RoleContro(role = RoleEnum.ADMIN)
     public ResultVO updateUser(@Valid UserUpdateForm userUpdateForm, BindingResult bindingResult) {
-        return userService.updateUser(userUpdateForm,bindingResult);
+        if (bindingResult.hasErrors()) {
+            log.info("参数注意必填项！");
+            return ResultVOUtil.error(ResultEnum.PARAMETER_ERROR);
+        }
+        return userService.updateUser(userUpdateForm);
     }
-
-
 }

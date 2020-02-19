@@ -1,7 +1,9 @@
 package com.cute.community.controller;
 
+import com.cute.community.enums.ResultEnum;
 import com.cute.community.form.LoginForm;
 import com.cute.community.service.UserService;
+import com.cute.community.util.ResultVOUtil;
 import com.cute.community.vo.ResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -17,12 +19,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 /**
- *@ClassName AnonController
- *@Description 登录接口
- *@Author Lenovo
- *@Date 2020/2/15 
- *@Version 1.0
-**/
+ * @ClassName AnonController
+ * @Description 登录接口
+ * @Author Lenovo
+ * @Date 2020/2/15
+ * @Version 1.0
+ **/
 
 @Slf4j
 @RestController
@@ -36,7 +38,11 @@ public class AnonController {
 
     @ApiOperation("登录")
     @PostMapping("/login")
-    public ResultVO login(@Valid LoginForm loginForm, HttpServletResponse response, BindingResult bindingResult) {
-        return userService.login(loginForm,response,bindingResult);
+    public ResultVO login(@Valid LoginForm loginForm, BindingResult bindingResult, HttpServletResponse response) {
+        if (bindingResult.hasErrors()) {
+            log.info("参数注意必填项！");
+            return ResultVOUtil.error(ResultEnum.PARAMETER_ERROR);
+        }
+        return userService.login(loginForm, response);
     }
 }

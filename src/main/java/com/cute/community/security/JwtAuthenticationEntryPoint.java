@@ -16,12 +16,12 @@ import java.io.IOException;
 import java.io.Serializable;
 
 /**
- *@ClassName JwtAuthenticationEntryPoint
- *@Description 拦截器
- *@Author Lenovo
- *@Date 2020/2/15
- *@Version 1.0
-**/
+ * @ClassName JwtAuthenticationEntryPoint
+ * @Description 拦截器
+ * @Author Lenovo
+ * @Date 2020/2/15
+ * @Version 1.0
+ **/
 
 @Component
 @Slf4j
@@ -33,11 +33,11 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint, Se
     public void commence(HttpServletRequest httpServletRequest,
                          HttpServletResponse httpServletResponse,
                          AuthenticationException e) throws IOException, ServletException {
-        httpServletResponse.setHeader("Access_Control_Allow_Origin","*");
+        httpServletResponse.setHeader("Access_Control_Allow_Origin", "*");
         httpServletResponse.setCharacterEncoding("UTF-8");
         httpServletResponse.setContentType("text/html; charset=utf-8");
         ResultVO result = ResultVOUtil.error(ResultEnum.AUTHENTICATION_ERROR);
-        log.info("需要身份认证:{}" ,result);
+        log.info("需要身份认证:{}", result);
         httpServletResponse.getWriter().append(JSON.toJSONString(result));
     }
 }

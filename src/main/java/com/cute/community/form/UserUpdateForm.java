@@ -6,12 +6,12 @@ import lombok.Data;
 import javax.validation.constraints.NotNull;
 
 /**
- *@ClassName UserUpdateForm
- *@Description 管理员更新用户信息
- *@Author Lenovo
- *@Date 2020/2/15
- *@Version 1.0
-**/
+ * @ClassName UserUpdateForm
+ * @Description 管理员更新用户信息
+ * @Author Lenovo
+ * @Date 2020/2/15
+ * @Version 1.0
+ **/
 
 @Data
 public class UserUpdateForm {
@@ -26,7 +26,7 @@ public class UserUpdateForm {
 
     @NotNull(message = "小组不能为空")
     @ApiModelProperty("小组")
-    private Integer groupType;
+    private String groupType;
 
     @NotNull(message = "权限不能为空")
     @ApiModelProperty("权限")

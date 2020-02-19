@@ -1,18 +1,21 @@
 package com.cute.community.dao;
 
 import com.cute.community.entity.File;
+
 import java.util.List;
+
 /**
- *@ClassName FileMapper
- *@Description 文件
- *@Author Lenovo
- *@Date 2020/2/15
- *@Version 1.0
-**/
+ * @ClassName FileMapper
+ * @Description 文件
+ * @Author Lenovo
+ * @Date 2020/2/15
+ * @Version 1.0
+ **/
 
 public interface FileMapper {
     /**
      * 删除
+     *
      * @param fileId
      * @return
      */
@@ -20,6 +23,7 @@ public interface FileMapper {
 
     /**
      * 插入
+     *
      * @param record
      * @return
      */
@@ -27,6 +31,7 @@ public interface FileMapper {
 
     /**
      * 通过学号删除
+     *
      * @param fileId
      * @return
      */
@@ -34,12 +39,14 @@ public interface FileMapper {
 
     /**
      * 查询所有
+     *
      * @return
      */
     List<File> selectAll();
 
     /**
      * 更新
+     *
      * @param record
      * @return
      */

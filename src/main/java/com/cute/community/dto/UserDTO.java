@@ -5,6 +5,14 @@ import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 
+/**
+ *@ClassName UserDTO
+ *@Description 用户
+ *@Author Lenovo
+ *@Date 2020/2/15
+ *@Version 1.0
+**/
+
 @Data
 public class UserDTO {
 

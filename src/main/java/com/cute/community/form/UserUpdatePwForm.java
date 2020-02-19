@@ -6,12 +6,12 @@ import lombok.Data;
 import javax.validation.constraints.NotNull;
 
 /**
- *@ClassName UserUpdatePwForm
- *@Description 修改密码
- *@Author Lenovo
- *@Date 2020/2/15
- *@Version 1.0
-**/
+ * @ClassName UserUpdatePwForm
+ * @Description 修改密码
+ * @Author Lenovo
+ * @Date 2020/2/15
+ * @Version 1.0
+ **/
 
 @Data
 public class UserUpdatePwForm {

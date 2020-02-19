@@ -5,17 +5,16 @@ import lombok.Getter;
 import java.util.HashMap;
 
 /**
- *@ClassName RoleEnum
- *@Description 用户权限的枚举
- *@Author Lenovo
- *@Date 2020/2/15
- *@Version 1.0
-**/
+ * @ClassName RoleEnum
+ * @Description 用户权限的枚举
+ * @Author Lenovo
+ * @Date 2020/2/15
+ * @Version 1.0
+ **/
 @Getter
 public enum RoleEnum {
     USER(0, "普通用户"),
-    ADMIN(1, "管理员")
-    ;
+    ADMIN(1, "管理员");
 
 
     private Integer value;

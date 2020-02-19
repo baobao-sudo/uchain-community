@@ -16,12 +16,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- *@ClassName JwtAuthenticationTokenFilter
- *@Description 拦截器
- *@Author Lenovo
- *@Date 2020/2/15
- *@Version 1.0
-**/
+ * @ClassName JwtAuthenticationTokenFilter
+ * @Description 拦截器
+ * @Author Lenovo
+ * @Date 2020/2/15
+ * @Version 1.0
+ **/
 
 @Slf4j
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {

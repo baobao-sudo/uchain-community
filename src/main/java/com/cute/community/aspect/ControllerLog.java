@@ -11,12 +11,12 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 /**
- *@ClassName ControllerLog
- *@Description controller的运行日志生成
- *@Author Lenovo
- *@Date 2020/2/15
- *@Version 1.0
-**/
+ * @ClassName ControllerLog
+ * @Description controller的运行日志生成
+ * @Author Lenovo
+ * @Date 2020/2/15
+ * @Version 1.0
+ **/
 
 @Aspect
 @Component

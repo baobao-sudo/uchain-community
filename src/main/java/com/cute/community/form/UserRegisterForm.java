@@ -29,6 +29,6 @@ public class UserRegisterForm {
      */
     @NotNull(message = "分组不能为空")
     @ApiModelProperty("分组（1.后端 2.前端 3.区块链 4.算法 5.UI）")
-    Integer groupId;
+    String groupType;
 
 }
